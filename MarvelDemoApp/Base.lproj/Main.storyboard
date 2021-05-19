@@ -110,7 +110,6 @@
         <!--Character Detail View Controller-->
         <scene sceneID="g94-Xn-lXD">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ehp-3f-G2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="CharacterDetailViewController" id="rgb-xN-m3J" customClass="CharacterDetailViewController" customModule="MarvelDemoApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zeS-ot-Jkf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -120,7 +119,7 @@
                                 <rect key="frame" x="10" y="10" width="394" height="886"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JCv-e1-9fz">
-                                        <rect key="frame" x="0.0" y="0.0" width="394" height="510"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="394" height="418"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="whA-6B-7pn">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="250"/>
@@ -142,15 +141,42 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Rnr-vs-Y2V"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-iR-VqP">
-                                                <rect key="frame" x="0.0" y="310" width="394" height="200"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdq-iR-VqP">
+                                                <rect key="frame" x="0.0" y="310" width="394" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="raP-BW-wVA">
+                                                <rect key="frame" x="0.0" y="320" width="394" height="34"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="oQX-4B-EHw"/>
+                                                    <constraint firstAttribute="height" constant="34" id="c7Y-32-c3Z"/>
                                                 </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIe-HF-p1G">
+                                                <rect key="frame" x="0.0" y="364" width="394" height="0.0"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Series" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbz-8t-deg">
+                                                <rect key="frame" x="0.0" y="374" width="394" height="34"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="34" id="Ei6-Dm-dM0"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbC-Er-iJx">
+                                                <rect key="frame" x="0.0" y="418" width="394" height="0.0"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -181,10 +207,13 @@
                     <navigationItem key="navigationItem" id="zTo-Na-acs"/>
                     <connections>
                         <outlet property="characterImage" destination="whA-6B-7pn" id="Hbl-96-WrV"/>
+                        <outlet property="comicsLabel" destination="mIe-HF-p1G" id="fts-wF-Pw4"/>
                         <outlet property="descriptionLabel" destination="Xdq-iR-VqP" id="3IF-17-x8F"/>
                         <outlet property="nameLabel" destination="Mv3-8b-ws4" id="7Wh-f1-jXw"/>
+                        <outlet property="seriesLabel" destination="pbC-Er-iJx" id="k0y-PL-u8a"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ehp-3f-G2h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="850.72463768115949" y="114.50892857142857"/>
         </scene>

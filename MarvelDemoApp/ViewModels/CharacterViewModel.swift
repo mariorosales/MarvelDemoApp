@@ -52,4 +52,23 @@ final class CharacterViewModel : BaseViewModel {
     public func characterDescription() -> String {
         return character?.description ?? " - "
     }
+    
+    public func characterComics() -> String {
+
+        guard let comics = character?.getComics() else { return " - "}
+        
+        let comicsNames = comics.map { (item) -> String in item.name ?? "-Unknown-" }
+        
+        return comicsNames.isEmpty ? " - " : comicsNames.joined(separator: "\n\n")
+    }
+    
+    public func characterSeries() -> String {
+        
+        guard let series = character?.getSeries() else { return " - "}
+        
+        let seriesNames = series.map { (item) -> String in item.name ?? "-Unknown-" }
+        
+        return seriesNames.isEmpty ? " - " : seriesNames.joined(separator: "\n\n")
+        
+    }
 }

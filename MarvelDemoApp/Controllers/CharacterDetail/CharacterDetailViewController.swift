@@ -16,7 +16,9 @@ class CharacterDetailViewController: UIViewController {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var characterImage: UIImageView!
-    
+    @IBOutlet weak var comicsLabel: UILabel!
+    @IBOutlet weak var seriesLabel: UILabel!
+
     static func create(with id: Int?) -> CharacterDetailViewController? {
         guard let id = id else { return nil }
         let viewController = UIStoryboard(name: Story.Main.rawValue, bundle: nil).instantiateViewController(withIdentifier: CharacterDetailViewController.identifier) as! CharacterDetailViewController
@@ -52,6 +54,8 @@ class CharacterDetailViewController: UIViewController {
 
         nameLabel.text = viewModel.characterName()
         descriptionLabel.text = viewModel.characterDescription()
+        comicsLabel.text = viewModel.characterComics()
+        seriesLabel.text = viewModel.characterSeries()
     }
     
     deinit {
